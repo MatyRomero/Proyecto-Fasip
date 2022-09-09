@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact || Const || Responsive HTML5 Template.</title>
+    <title>Contacto-Fasip</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -136,7 +136,7 @@
         </div>
         <!-- Termino menu contacto desplegable -->
 
-<!--Start Main Header Three-->
+        <!--Start Main Header Three-->
         <header class="main-header main-header-three  clearfix">
             <div class="main-header-three__wrapper">
 
@@ -292,7 +292,6 @@
                 <div class="col-xl-12">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d407.78869049155765!2d-70.6621298!3d-33.6083424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d92e6837c2b5%3A0x6a1601c2190ee967!2sCasona%20Mariscal!5e1!3m2!1ses-419!2scl!4v1662604356208!5m2!1ses-419!2scl"
-
                         class="contact-page-google-map__one" allowfullscreen></iframe>
                 </div>
             </div>
@@ -658,7 +657,41 @@
     <!-- template js -->
     <script src="assets/js/script.js"></script>
 
+    <!-- <script>
+            $("document").ready(function () {
+                $("#vacuno").trigger("mouseover")
 
+                $("#enviar_formulario").on("click", function () {
+                    $.ajax({
+                        url: 'https://api.safeware.cl/delivery_email/send_mail',
+                        type: 'post',
+                        headers: {
+                            'Authorization': 'Token 9a28e1d63a5cf67ebe88fe8ffa810c37c0001e04',
+                        },
+                        data: {
+                            "destino": "contacto@ganaderaelcampesino.cl",
+                            "origen": "contacto@ganaderaelcampesino.cl",
+                            "mensaje": $("#comentarios").val(),
+                            "asunto": "Nuevo Mensaje desde Sitio Web: " + $("#nombre").val(),
+                            "sitio_web_origen": "ganaderaelcampesino.cl",
+                            "reply_to": $("#email").val()
+                        },
+                        success: function (response) {
+                            $("#email").val("")
+                            $("#comentarios").val("")
+                            $("#nombre").val("")
+                            $("#telefono").val("")
+                            swal("Enviado!", "Mensaje enviado con éxito!", "success");
+
+                        }
+                    });
+                })
+
+
+
+            })
+            </script> 
+        -->
 </body>
 
 </html>
