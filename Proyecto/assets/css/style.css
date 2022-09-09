@@ -9019,7 +9019,8 @@ button {
 }
 
 .main-header-three__middle-inner .logo-box a img {
-    width: 100%;
+    width: 240px;
+    height: 165px;
 }
 
 
