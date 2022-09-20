@@ -4229,8 +4229,8 @@ button {
 .footer-one__top {
     position: relative;
     display: block;
-    padding: 112px 0px 112px;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding: 40px 0px 40px;
+    
 }
 
 .footer-one__top-img {
