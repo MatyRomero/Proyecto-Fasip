@@ -94,7 +94,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--thm-black);
+    color:var(--thm-black);
     font-weight: 700;
     font-family: var(--thm-font-2);
     margin: 0;
@@ -5055,6 +5055,7 @@ button {
     z-index: 1;
 }
 
+/* Efecto de servicios */
 .feature-two__single .shape1 {
     position: absolute;
     top: -70px;
