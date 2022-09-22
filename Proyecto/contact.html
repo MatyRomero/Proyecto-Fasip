@@ -357,35 +357,33 @@
                 <!--Start Contact Page Form-->
                 <div class="col-xl-8 col-lg-8 col-md-7">
                     <div class="contact-page__form">
-                        <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
-                            novalidate="novalidate">
+                        <form action="assets/inc/sendemail.php" method="post">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="text" placeholder="Nombre" name="name">
+                                        <input type="text" placeholder="Nombre" name="nombre">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="email" placeholder="Email" name="email">
+                                        <input type="email" placeholder="Correo" name="correo">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="text" placeholder="Telefono" name="phone">
+                                        <input type="text" placeholder="Asunto" name="asunto">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12">
                                     <div class="comment-form__input-box">
-                                        <textarea name="message" placeholder="Mensaje"></textarea>
+                                        <textarea name="mensaje" placeholder="Mensaje"></textarea>
                                     </div>
-                                    <button class="thm-btn comment-form__btn" data-text="Enviar +" type="submit"
-                                        data-loading-text="Please wait...">Enviar
-                                        +</button>
+                                    <input class="thm-btn comment-form__btn" type="submit">
+
                                 </div>
                             </div>
                         </form>
@@ -403,161 +401,163 @@
         </div>
         <div class="footer-one__top">
             <!-- <div class="footer-one__top-img" style="background-image:url(assets/images/resources/footer-v1-img3.png);"> -->
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="footer-one__top-inner">
-                            <div class="row">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="footer-one__top-inner">
+                        <div class="row">
 
-                                <!--Start Footer Widget Column-->
-                                <div class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
-                                    <div class="footer-widget__column footer-widget__about">
-                                        <div class="footer-widget__about-logo">
-                                            <a href="index.html"><img src="assets/images/resources/logo-1.png"
-                                                    alt=""></a>
-                                        </div>
-
-                                        <p class="footer-widget__about-text">Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Vitae consequuntur sint commodi, repellat quis, natus unde
-                                            exercitationem quo nostrum molestias cupiditate recusandae similique
-                                            blanditiis ex vero dolores architecto iure excepturi.</p>
-
-                                         <div class="footer-widget__about-social-link">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="first icon-facebook-app-symbol"></span>
-                                                        <span class="second icon-facebook-app-symbol"></span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="first icon-twitter"></span>
-                                                        <span class="second icon-twitter"></span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="first icon-pinterest"></span>
-                                                        <span class="second icon-pinterest"></span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="first icon-linkedin"></span>
-                                                        <span class="second icon-linkedin"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div> 
+                            <!--Start Footer Widget Column-->
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__about-logo">
+                                        <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
                                     </div>
-                                </div>
-                                <!--End Footer Widget Column-->
 
-                                <!--Start Footer Widget Column-->
-                                <div class="col-xl-2 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
-                                    <div class="footer-widget__column footer-widget__services">
-                                        <h2 class="footer-widget__title">Contactos</h2>
-                                        <ul class="footer-widget__services-list">
-                                            <li class="footer-widget__services-list-item"><a href="about-one.html">Email
-                                                    Benjamín
-                                                </a></li>
+                                    <p class="footer-widget__about-text">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Vitae consequuntur sint commodi, repellat quis, natus unde
+                                        exercitationem quo nostrum molestias cupiditate recusandae similique
+                                        blanditiis ex vero dolores architecto iure excepturi.</p>
 
-                                            <li class="footer-widget__services-list-item"><a
-                                                    href="services.html">Teléfono Benjamín
-                                                </a></li>
+                                    <div class="footer-widget__about-social-link">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="first icon-facebook-app-symbol"></span>
+                                                    <span class="second icon-facebook-app-symbol"></span>
+                                                </a>
+                                            </li>
 
-                                            <li class="footer-widget__services-list-item"><a href="blog.html">Email Juan
-                                                </a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="first icon-twitter"></span>
+                                                    <span class="second icon-twitter"></span>
+                                                </a>
+                                            </li>
 
-                                            <li class="footer-widget__services-list-item"><a
-                                                    href="portfolio.html">Teléfono Juan
-                                                </a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="first icon-pinterest"></span>
+                                                    <span class="second icon-pinterest"></span>
+                                                </a>
+                                            </li>
 
-
-
+                                            <li>
+                                                <a href="#">
+                                                    <span class="first icon-linkedin"></span>
+                                                    <span class="second icon-linkedin"></span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <!--End Footer Widget Column-->
-
-                                 <!--Start Footer Widget Column-->
-                                <div class="col-xl-2 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.5s">
-
-                                    <div class="footer-widget__column footer-widget__explore">
-                                        <h2 class="footer-widget__title">Servicios</h2>
-                                        <ul class="footer-widget__explore-list">
-
-                                            <li class="footer-widget__explore-list-item"><a href="OsbOsb.html"> OSB / OSB</a> </li>
-
-                                            <li class="footer-widget__explore-list-item"><a href="OSB_SMART.html">OSB / SMART
-                                                </a></li>
-
-                                            <li class="footer-widget__explore-list-item"><a href="OSB_TR.html">OSB / TR 
-                                                </a></li>
-
-                                            <li class="footer-widget__explore-list-item"><a href="OSB_HWRAP.html">OSB / HWRAP
-                                                </a></li>
-
-                                            <!-- <li class="footer-widget__explore-list-item"><a href="HWRAP_TR.html"> HWRAP / TR 
-                                                </a></li> -->
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!--End Footer Widget Column-->
-
-                                <!--Start Footer Widget Column-->
-                                <div class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.7s">
-                                    <div class="footer-widget__column footer-widget__posts">
-                                        <h2 class="footer-widget__title">Nuestro equipo</h2>
-
-                                        <div class="footer-widget__posts-list">
-                                            <ul>
-                                                <li>
-                                                    <div class="img-box">
-                                                        <img src="assets/images/resources/Benjita.jpg" alt="" />
-                                                        <div class="overlay-icon">
-                                                            <a href="#"><span class="icon-link"></span></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="text-box">
-                                                        <p><a href="#">Benjamín Cox<br> Fundador
-                                                            </a></p>
-                                                        <br>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="img-box">
-                                                        <img src="assets/images/resources/juan.jpg" alt="" />
-                                                        <div class="overlay-icon">
-                                                            <a href="#"><span class="icon-link"></span></a>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="text-box">
-                                                        <p><a href="#">Juan Valenzuela<br> Gerente Comercial
-                                                            </a></p>
-                                                        <br>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Footer Widget Column-->
                             </div>
+                            <!--End Footer Widget Column-->
+
+                            <!--Start Footer Widget Column-->
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
+                                <div class="footer-widget__column footer-widget__services">
+                                    <h2 class="footer-widget__title">Contactos</h2>
+                                    <ul class="footer-widget__services-list">
+                                        <li class="footer-widget__services-list-item"><a href="about-one.html">Email
+                                                Benjamín
+                                            </a></li>
+
+                                        <li class="footer-widget__services-list-item"><a href="services.html">Teléfono
+                                                Benjamín
+                                            </a></li>
+
+                                        <li class="footer-widget__services-list-item"><a href="blog.html">Email Juan
+                                            </a></li>
+
+                                        <li class="footer-widget__services-list-item"><a href="portfolio.html">Teléfono
+                                                Juan
+                                            </a></li>
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--End Footer Widget Column-->
+
+                            <!--Start Footer Widget Column-->
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.5s">
+
+                                <div class="footer-widget__column footer-widget__explore">
+                                    <h2 class="footer-widget__title">Servicios</h2>
+                                    <ul class="footer-widget__explore-list">
+
+                                        <li class="footer-widget__explore-list-item"><a href="OsbOsb.html"> OSB /
+                                                OSB</a> </li>
+
+                                        <li class="footer-widget__explore-list-item"><a href="OSB_SMART.html">OSB /
+                                                SMART
+                                            </a></li>
+
+                                        <li class="footer-widget__explore-list-item"><a href="OSB_TR.html">OSB / TR
+                                            </a></li>
+
+                                        <li class="footer-widget__explore-list-item"><a href="OSB_HWRAP.html">OSB /
+                                                HWRAP
+                                            </a></li>
+
+                                        <!-- <li class="footer-widget__explore-list-item"><a href="HWRAP_TR.html"> HWRAP / TR 
+                                                </a></li> -->
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--End Footer Widget Column-->
+
+                            <!--Start Footer Widget Column-->
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.7s">
+                                <div class="footer-widget__column footer-widget__posts">
+                                    <h2 class="footer-widget__title">Nuestro equipo</h2>
+
+                                    <div class="footer-widget__posts-list">
+                                        <ul>
+                                            <li>
+                                                <div class="img-box">
+                                                    <img src="assets/images/resources/Benjita.jpg" alt="" />
+                                                    <div class="overlay-icon">
+                                                        <a href="#"><span class="icon-link"></span></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="text-box">
+                                                    <p><a href="#">Benjamín Cox<br> Fundador
+                                                        </a></p>
+                                                    <br>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="img-box">
+                                                    <img src="assets/images/resources/juan.jpg" alt="" />
+                                                    <div class="overlay-icon">
+                                                        <a href="#"><span class="icon-link"></span></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="text-box">
+                                                    <p><a href="#">Juan Valenzuela<br> Gerente Comercial
+                                                        </a></p>
+                                                    <br>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Footer Widget Column-->
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
 
@@ -627,7 +627,7 @@
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
-
+    <script src="assets/inc/sendemail.php"></script>
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jarallax/jarallax.min.js"></script>
@@ -656,42 +656,6 @@
 
     <!-- template js -->
     <script src="assets/js/script.js"></script>
-
-    <!-- <script>
-            $("document").ready(function () {
-                $("#vacuno").trigger("mouseover")
-
-                $("#enviar_formulario").on("click", function () {
-                    $.ajax({
-                        url: 'https://api.safeware.cl/delivery_email/send_mail',
-                        type: 'post',
-                        headers: {
-                            'Authorization': 'Token 9a28e1d63a5cf67ebe88fe8ffa810c37c0001e04',
-                        },
-                        data: {
-                            "destino": "contacto@ganaderaelcampesino.cl",
-                            "origen": "contacto@ganaderaelcampesino.cl",
-                            "mensaje": $("#comentarios").val(),
-                            "asunto": "Nuevo Mensaje desde Sitio Web: " + $("#nombre").val(),
-                            "sitio_web_origen": "ganaderaelcampesino.cl",
-                            "reply_to": $("#email").val()
-                        },
-                        success: function (response) {
-                            $("#email").val("")
-                            $("#comentarios").val("")
-                            $("#nombre").val("")
-                            $("#telefono").val("")
-                            swal("Enviado!", "Mensaje enviado con éxito!", "success");
-
-                        }
-                    });
-                })
-
-
-
-            })
-            </script> 
-        -->
 </body>
 
 </html>
