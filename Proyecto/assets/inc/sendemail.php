@@ -1,40 +1,81 @@
 <?php
-$remitente = $_POST ['email'];
-$destinatario = 'ignacioquezada@fasipchile.com';
-$asunto = 'Asunto de ejemplo';
-if (!$_POST){
+require '../../PHPMailer-6.6.4/src/PHPMailer.php';
+require '../../PHPMailer-6.6.4/src/SMTP.php';
+require '../../PHPMailer-6.6.4/src/Exception.php';
+
+    if($_POST){
+
+        $destino = "ignacioquezada@fasipchile.com"
+        $nombre = $_POST['nombre'];
+        $email = $_POST['correo'];
+        $mensaje = $_POST['mensaje'];
+
+
+        $smtHost = "mail.fasipchile.com";
+        $smtUsuario = "contacto@fasipchile.com";
+        $smtClave = "0W7Sg?oF.tSy";
+
+
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->SMTPAuth = true;
+        $mail->Port = 465;
+        $mail->IsHTML(true);
+        $mail->CharSet = "utf-8";
+
+        //VALORES A MODIFICAR // 
+
+        $mail->Host = $smtHost;
+        $mail->Username = $smtUsuario;
+        $mail->Password = $smtClave;
+
+        $mail->From = $email;
+        $mail->FromName = $nombre;
+        $mail->AddAddress($destino);
+
+        $mail->Subject = "Contacto Fasip";
+        $mensajeHtml = n12br($mensaje);
+        $mail->body = "
+        <html>
+        
+        <body>
+        
+        <h1>Correo Desde Contacto FASIP</h1>
+        
+        <p> Informaciòn enviada por el usuario: </p>
+        
+        <p>nombre: {$nombre}</p>
+
+        <p>email: {$email}</p>
+
+        <p>mensaje: {$mensaje}</p>
+
+        </body>
+
+        </html>
+
+        <br />";
+        $mail->AltBody = "{$mensaje} \n\n ";
+
+        //FIN VALORES A MODIFICAR // 
+
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'verify_self_signed' => true
+            )
+        );
+
+        $estadoEnvio = $mail->Send();
+       if($estadoEnvio){
+        header("Location:http://fasipchile.com/contact.html");
+       } else{
+        echo "Hubo problemas con el envio";
+        exit();
+       }
+    }else{
+        echo "No hay Datos que procesar"
+        exit();
+    }
 ?>
-<?php
-}else{
-
-    $cuerpo = "Nombre: " . $_POST["nombre"] . "\r\n";
-    $cuerpo .= "Asunto: " . $_POST["asunto"] . "\r\n";
-    $cuerpo = "Correo: " . $_POST["correo"] . "\r\n";
-    $cuerpo = "Mensaje: " . $_POST["mensaje"] . "\r\n";
-
-
-    $header = "MIME-version: 1.0\n";
-    $header . = "Content-type: text/plain; charset-utf-8\n";
-    $header . = "X-Priority: 3\n";
-    $header . = "X-Mailer: php\n";
-    $header . = "From: \ "".$_POST['nombre']." ".$POST['apellido']."\" <".$remitente.">\n"
-
-    mail($destinatario, $asunto, $cuerpo, $header);
-}
-?>
-
-// <!-- if (isset($_POST['enviar'])) {
-//     if (!empty($_POST['name']) && !empty($_POST['asunto']) && !empty ($_POST['message']) && !empty($_POST['email'])) {
-//         $name = $_POST['name'];
-//         $asunto = $_POST['asunto'];
-//         $message = $_POST['message'];
-//         $email = $_POST['email'];
-//         $header = "From: noreply@example.com" . "\r\n";
-//         $header. = "Reply-To: noreply@example.com" . "\r\n";
-//         $header. =  "X-Mailer: PHP/". phpversion();
-//         $mail = @mail($email,$asunto,$message,$header);
-//         if (mail) {
-//           echo "<h4>!Mail enviado exitosamente!</h4>";
-//         }
-//     }
-// } -->
